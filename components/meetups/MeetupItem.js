@@ -1,19 +1,23 @@
+import Link from "next/link";
 import Card from "../ui/Card";
 import classes from "./MeetupItem.module.css";
+import Image from "next/image";
 
-function MeetupItem({ image, title, address }) {
+function MeetupItem({ id, image, title, address }) {
   return (
     <li className={classes.item}>
       <Card>
         <div className={classes.image}>
-          <img src={image} alt={title} />
+          <Image src={image} alt={title} width="0" height="0" sizes="100vw" className={classes.thumbnail} />
         </div>
         <div className={classes.content}>
           <h3>{title}</h3>
           <address>{address}</address>
         </div>
         <div className={classes.actions}>
-          <button>Show Details</button>
+          <Link href={`/${id}`}>
+            <button>Show Details</button>
+          </Link>
         </div>
       </Card>
     </li>
