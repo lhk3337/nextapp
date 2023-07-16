@@ -3,7 +3,7 @@ import Card from "../ui/Card";
 import classes from "./MeetupItem.module.css";
 import Image from "next/image";
 
-function MeetupItem({ id, image, title, address }) {
+function MeetupItem({ _id, image, title, address }) {
   return (
     <li className={classes.item}>
       <Card>
@@ -15,7 +15,7 @@ function MeetupItem({ id, image, title, address }) {
           <address>{address}</address>
         </div>
         <div className={classes.actions}>
-          <Link href={`/${id}`}>
+          <Link href={`/${_id}`}>
             <button>Show Details</button>
           </Link>
         </div>
