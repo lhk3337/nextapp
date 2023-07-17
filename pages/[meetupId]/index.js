@@ -2,6 +2,7 @@ import React from "react";
 import { DUMMY_MEETUPS } from "../index";
 
 import MeetupDetail from "../../components/meetups/MeetupDetail";
+import Head from "next/head";
 // import { useRouter } from "next/router";
 const MeetupDetails = ({ meetupData }) => {
   // const router = useRouter();
@@ -9,9 +10,13 @@ const MeetupDetails = ({ meetupData }) => {
   // const DETAIL_DUMMY_DATA = DUMMY_MEETUPS.find((value) => value.id === meetupId);
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>{meetupData.title}</title>
+        <meta name="description" content={`${meetupData.description}`} />
+      </Head>
       <MeetupDetail {...meetupData} />
-    </div>
+    </>
   );
 };
 

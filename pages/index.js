@@ -1,8 +1,12 @@
 import MeetupList from "../components/meetups/MeetupList";
-
+import Head from "next/head";
 export default function Home({ meetups }) {
   return (
     <>
+      <Head>
+        <title>Nextjs Meetup</title>
+        <meta name="description" content="Browse a huge list of highly active nextjs meetup!" />
+      </Head>
       <MeetupList meetups={meetups} />
     </>
   );
