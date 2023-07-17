@@ -2,6 +2,14 @@
   text-align: center;
 }
 
-.detail img {
+.image {
+  overflow: hidden;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.image .thumbnail {
   width: 100%;
+  height: 20rem;
+  object-fit: cover;
 }

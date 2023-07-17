@@ -8,6 +8,12 @@ module.exports = {
         port: "",
         pathname: "/wikipedia/commons/d/d3/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
